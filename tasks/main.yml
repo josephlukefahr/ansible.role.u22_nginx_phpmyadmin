@@ -11,10 +11,10 @@
     owner: root
     group: root
     mode: "0644"
-- name: php 
-  ansible.builtin.copy:
-    src: default
-    dest: /var/www
+- name: phpmyadmin site content ownership correct 
+  ansible.builtin.file:
+    path: /usr/share/phpmyadmin
+    state: directory
+    recurse: yes
     owner: www-data
     group: www-data
-    mode: "0664"
