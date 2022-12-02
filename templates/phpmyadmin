@@ -20,7 +20,7 @@
 
 server {
     listen [::]:8081 default_server ipv6only=off;
-    root /var/www/phpmyadmin;
+    root /usr/share/phpmyadmin;
     index index.html;
     server_name _;
     location / {

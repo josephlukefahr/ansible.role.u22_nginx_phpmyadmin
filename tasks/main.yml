@@ -11,3 +11,10 @@
     owner: root
     group: root
     mode: "0644"
+- name: php 
+  ansible.builtin.copy:
+    src: default
+    dest: /var/www
+    owner: www-data
+    group: www-data
+    mode: "0664"
