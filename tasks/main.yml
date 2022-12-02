@@ -1,0 +1,13 @@
+---
+- name: phpmyadmin installed
+  ansible.builtin.apt:
+    name: phpmyadmin
+    state: latest
+- name: phpmyadmin site config in place
+  notify: restart nginx
+  ansible.builtin.template:
+    src: phpmyadmin
+    dest: /etc/nginx/sites-enabled
+    owner: root
+    group: root
+    mode: "0644"

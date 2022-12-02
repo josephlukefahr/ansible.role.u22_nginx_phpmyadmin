@@ -1,1 +1,0 @@
-# ansible.role.u22_phpmyadmin
